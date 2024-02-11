@@ -19,7 +19,7 @@ input.addEventListener('keypress', showData)
 
 
 async function showResults(value) {
-    const data = await fetch(`${api_details.url}weather?q=${value}&units=metric&APPID=${api_details.api_key}`)
+    const data = await fetch(`${api_details.url}weather?q=${value}&units=metric&APPID=${api_details.api_key}`);
     const fdata = await data.json();
     if (fdata.message === "city not found") {
         document.querySelector('.location-city').innerText = null;
